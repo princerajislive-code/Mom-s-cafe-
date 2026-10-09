@@ -1,0 +1,6 @@
+{
+  "name": "Mom's Cafe & Dosa | Bhabua",
+  "description": "Mom's Cafe & Mom's Dosa in Bhabua, Bihar. Home-style South Indian dosas, Indo-Chinese and beverages made with love. Dine-in and fast delivery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
