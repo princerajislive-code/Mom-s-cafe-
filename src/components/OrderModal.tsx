@@ -54,13 +54,10 @@ export function OrderModal({ isOpen, onClose, onOpenMenu }: OrderModalProps) {
         {/* Buttons */}
         <div className="space-y-3">
           <a
-            href={RESTAURANT_INFO.whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-btn w-full inline-flex items-center justify-center gap-2 py-3.5 px-4 bg-[#25D366] hover:bg-[#1EBE5D] text-white text-xs uppercase tracking-wider font-semibold rounded-lg shadow-sm hover:shadow transition-colors"
+            href={RESTAURANT_INFO.digitalMenuUrl}
+            className="font-btn w-full inline-flex items-center justify-center gap-2 py-3.5 px-4 bg-[#D6B56C] hover:bg-[#E5C679] text-[#121110] text-xs uppercase tracking-wider font-bold rounded-lg shadow-sm hover:shadow transition-colors"
           >
-            <MessageSquare className="w-4 h-4" />
-            <span>Order via WhatsApp ({RESTAURANT_INFO.phone})</span>
+            <span>Explore Digital Menu ↗</span>
           </a>
 
           <a

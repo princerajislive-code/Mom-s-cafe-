@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowRight, ShoppingBag, X, MessageSquare, Phone } from 'lucide-react';
+import { ArrowRight, ShoppingBag, X, Sparkles, Phone } from 'lucide-react';
 import { RESTAURANT_INFO } from '../data/restaurantData';
 
 export function ZomatoBanner() {
@@ -93,13 +93,11 @@ export function ZomatoBanner() {
 
             <div className="mt-6 flex flex-col gap-2.5">
               <a
-                href={RESTAURANT_INFO.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-btn inline-flex items-center justify-center gap-2 px-4 py-3 bg-[#25D366] hover:bg-[#1EBE5D] text-white text-xs uppercase tracking-wider font-semibold rounded-lg transition-colors shadow-xs"
+                href={RESTAURANT_INFO.digitalMenuUrl}
+                className="font-btn inline-flex items-center justify-center gap-2 px-4 py-3 bg-[#D6B56C] hover:bg-[#E5C679] text-[#121110] text-xs uppercase tracking-wider font-bold rounded-lg transition-colors shadow-xs"
               >
-                <MessageSquare className="w-4 h-4" />
-                <span>Order on WhatsApp ({RESTAURANT_INFO.phone})</span>
+                <Sparkles className="w-4 h-4 text-[#121110]" />
+                <span>Explore Digital Menu ↗</span>
               </a>
 
               <a

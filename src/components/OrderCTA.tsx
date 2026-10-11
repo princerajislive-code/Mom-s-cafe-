@@ -1,4 +1,4 @@
-import { MessageSquare, Phone } from 'lucide-react';
+import { Sparkles, Phone } from 'lucide-react';
 import { RESTAURANT_INFO } from '../data/restaurantData';
 
 export function OrderCTA() {
@@ -23,16 +23,14 @@ export function OrderCTA() {
           Visit Mom's Cafe in Bhabua or order your favourites for delivery.
         </p>
 
-        {/* Buttons: ORDER ON WHATSAPP & CALL NOW */}
+        {/* Buttons: EXPLORE DIGITAL MENU ↗ & CALL NOW */}
         <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href={RESTAURANT_INFO.whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-btn w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-[#25D366] hover:bg-[#1EBE5D] text-white text-xs uppercase tracking-wider font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]"
+            href={RESTAURANT_INFO.digitalMenuUrl}
+            className="font-btn w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-gradient-to-r from-[#F7E7B4] via-[#D6B56C] to-[#E5C679] hover:from-white hover:to-[#F7E7B4] text-[#121110] text-xs uppercase tracking-wider font-bold rounded-lg shadow-lg hover:shadow-xl transition-all active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D6B56C]"
           >
-            <MessageSquare className="w-4 h-4" />
-            <span>ORDER ON WHATSAPP</span>
+            <Sparkles className="w-4 h-4 text-[#121110]" />
+            <span>EXPLORE DIGITAL MENU ↗</span>
           </a>
 
           <a

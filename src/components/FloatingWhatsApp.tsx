@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { MessageSquare, ArrowUp } from 'lucide-react';
+import { Sparkles, ArrowUp } from 'lucide-react';
 import { RESTAURANT_INFO } from '../data/restaurantData';
 
 export function FloatingWhatsApp() {
@@ -32,17 +32,15 @@ export function FloatingWhatsApp() {
         </button>
       )}
 
-      {/* Floating WhatsApp Action Button */}
+      {/* Floating Digital Menu Action Button */}
       <a
-        href={RESTAURANT_INFO.whatsappUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="pointer-events-auto group flex items-center gap-2.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white p-3 sm:px-4 sm:py-3 rounded-full shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]"
-        aria-label="Chat and Order on WhatsApp"
+        href={RESTAURANT_INFO.digitalMenuUrl}
+        className="pointer-events-auto group flex items-center gap-2 bg-gradient-to-r from-[#F7E7B4] via-[#D6B56C] to-[#E5C679] hover:from-white hover:to-[#F7E7B4] text-[#121110] p-3 sm:px-4 sm:py-3 rounded-full shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 active:scale-95 border border-[#D6B56C]/40"
+        aria-label="Explore Digital Menu"
       >
-        <MessageSquare className="w-5 h-5 shrink-0" />
-        <span className="hidden sm:inline font-btn text-xs font-semibold uppercase tracking-wider">
-          Order on WhatsApp
+        <Sparkles className="w-4 h-4 shrink-0 text-[#121110]" />
+        <span className="font-btn text-xs font-bold uppercase tracking-wider">
+          Digital Menu ↗
         </span>
       </a>
     </div>

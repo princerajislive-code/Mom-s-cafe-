@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowRight, MessageSquare } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 import { MENU_ITEMS, RESTAURANT_INFO } from '../data/restaurantData';
 import { SafeImage } from './SafeImage';
 
@@ -96,20 +96,18 @@ export function MenuPreview({ onOpenFullMenu }: MenuPreviewProps) {
                 </div>
               </div>
 
-              {/* Card Footer: Action / Order enquiry (Honoring strict rule: Do not invent prices) */}
+              {/* Card Footer: Digital Menu Action */}
               <div className="px-5 sm:px-6 pb-5 sm:pb-6 pt-3 border-t border-[#E8DED2]/60 flex items-center justify-between">
                 <span className="text-xs font-medium text-[#1F1F1F]/60">
                   Made to Order
                 </span>
 
                 <a
-                  href={getWhatsAppItemLink(item.name)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-btn inline-flex items-center gap-1.5 text-xs font-semibold text-[#A65F3B] hover:text-[#8F4E2E] py-1 px-2.5 rounded-lg hover:bg-[#FAF8F3] transition-colors"
+                  href={RESTAURANT_INFO.digitalMenuUrl}
+                  className="font-btn inline-flex items-center gap-1.5 text-xs font-semibold text-[#8C522B] hover:text-[#1F1F1F] py-1 px-3 rounded-full bg-[#D6B56C]/20 hover:bg-[#D6B56C]/35 border border-[#D6B56C]/50 transition-colors shadow-2xs"
                 >
-                  <MessageSquare className="w-3.5 h-3.5" />
-                  <span>Order on WhatsApp</span>
+                  <Sparkles className="w-3 h-3 text-[#D6B56C]" />
+                  <span>Digital Menu ↗</span>
                 </a>
               </div>
             </article>
