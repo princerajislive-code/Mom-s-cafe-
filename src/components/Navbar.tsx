@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, Sparkles } from 'lucide-react';
 import { RESTAURANT_INFO } from '../data/restaurantData';
 
 interface NavbarProps {
@@ -22,6 +22,11 @@ export function Navbar({ onOpenOrderModal }: NavbarProps) {
     { label: 'Home', href: '#home' },
     { label: 'About', href: '#about' },
     { label: 'Menu', href: '#menu' },
+    { 
+      label: 'Digital Menu ↗', 
+      href: RESTAURANT_INFO.digitalMenuUrl, 
+      isDigitalMenu: true 
+    },
     { label: 'Contact', href: '#contact' },
   ];
 
@@ -45,17 +50,32 @@ export function Navbar({ onOpenOrderModal }: NavbarProps) {
             </span>
           </a>
 
-          {/* Zone 2: Navigation Links (Text with clean hover styling) */}
-          <nav className="hidden md:flex items-center gap-8" aria-label="Main Navigation">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-sm font-medium text-[#1F1F1F]/80 hover:text-[#A65F3B] transition-colors relative py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#A65F3B] rounded"
-              >
-                {link.label}
-              </a>
-            ))}
+          {/* Zone 2: Navigation Links (Text with clean hover styling + Gold Digital Menu) */}
+          <nav className="hidden md:flex items-center gap-6 lg:gap-7" aria-label="Main Navigation">
+            {navLinks.map((link) => {
+              if (link.isDigitalMenu) {
+                return (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className="group relative inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold text-[#8F4E2E] hover:text-[#1F1F1F] bg-[#D6B56C]/15 hover:bg-[#D6B56C]/25 border border-[#D6B56C]/50 hover:border-[#D6B56C] shadow-2xs hover:shadow-xs transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D6B56C]"
+                  >
+                    <Sparkles className="w-3.5 h-3.5 text-[#D6B56C] group-hover:scale-110 transition-transform" />
+                    <span>Digital Menu ↗</span>
+                    <span className="absolute bottom-0 left-3 right-3 h-[1.5px] bg-[#D6B56C] scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-center" />
+                  </a>
+                );
+              }
+              return (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="text-sm font-medium text-[#1F1F1F]/80 hover:text-[#A65F3B] transition-colors relative py-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#A65F3B] rounded"
+                >
+                  {link.label}
+                </a>
+              );
+            })}
           </nav>
 
           {/* Zone 3: Primary Action CTA */}
@@ -112,17 +132,36 @@ export function Navbar({ onOpenOrderModal }: NavbarProps) {
               <p className="text-xs text-[#1F1F1F]/70 mt-1">Home Style Taste, Made with Love</p>
             </div>
 
-            <nav className="flex flex-col space-y-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="text-base font-medium text-[#1F1F1F] hover:text-[#A65F3B] transition-colors py-1"
-                >
-                  {link.label}
-                </a>
-              ))}
+            <nav className="flex flex-col space-y-3.5">
+              {navLinks.map((link) => {
+                if (link.isDigitalMenu) {
+                  return (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      className="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold text-[#8F4E2E] bg-[#D6B56C]/15 border border-[#D6B56C]/50 hover:bg-[#D6B56C]/25 transition-all shadow-2xs"
+                    >
+                      <span className="flex items-center gap-2">
+                        <Sparkles className="w-4 h-4 text-[#D6B56C]" />
+                        <span>Digital Menu ↗</span>
+                      </span>
+                      <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#D6B56C]/25 text-[#8F4E2E] font-semibold">
+                        Online
+                      </span>
+                    </a>
+                  );
+                }
+                return (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="text-base font-medium text-[#1F1F1F] hover:text-[#A65F3B] transition-colors py-1"
+                  >
+                    {link.label}
+                  </a>
+                );
+              })}
             </nav>
           </div>
 

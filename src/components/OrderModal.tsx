@@ -71,13 +71,20 @@ export function OrderModal({ isOpen, onClose, onOpenMenu }: OrderModalProps) {
             <span>Call to Order ({RESTAURANT_INFO.phone})</span>
           </a>
 
+          <a
+            href={RESTAURANT_INFO.digitalMenuUrl}
+            className="font-btn w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-4 text-xs font-semibold text-[#D6B56C] bg-[#121110] hover:bg-[#1c1a17] rounded-lg transition-colors border border-[#D6B56C]/30 shadow-xs"
+          >
+            <span>Explore 3D Digital Menu ↗</span>
+          </a>
+
           <button
             type="button"
             onClick={() => {
               onClose();
               onOpenMenu();
             }}
-            className="font-btn w-full inline-flex items-center justify-center py-2.5 px-4 text-xs font-semibold text-[#A65F3B] hover:text-[#8F4E2E] hover:bg-[#E8DED2]/40 rounded-lg transition-colors"
+            className="font-btn w-full inline-flex items-center justify-center py-2 px-4 text-xs font-semibold text-[#A65F3B] hover:text-[#8F4E2E] hover:bg-[#E8DED2]/40 rounded-lg transition-colors"
           >
             Explore Full Kitchen Menu →
           </button>

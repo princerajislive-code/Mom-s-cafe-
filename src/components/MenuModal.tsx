@@ -58,6 +58,25 @@ export function MenuModal({ isOpen, onClose }: MenuModalProps) {
           </button>
         </div>
 
+        {/* Luxury 3D Digital Menu Banner */}
+        <div className="px-4 pt-3 sm:px-6 bg-[#FAF8F3]">
+          <a
+            href={RESTAURANT_INFO.digitalMenuUrl}
+            className="w-full p-3 rounded-xl bg-gradient-to-r from-[#171512] via-[#221F19] to-[#171512] border border-[#D6B56C]/40 flex items-center justify-between text-white hover:border-[#D6B56C] transition-all shadow-sm group"
+          >
+            <div className="flex items-center gap-2.5">
+              <span className="w-2 h-2 rounded-full bg-[#D6B56C] animate-ping" />
+              <span className="text-xs font-semibold text-[#F7E7B4]">
+                ✨ Prefer our Luxury 3D Digital Menu?
+              </span>
+            </div>
+            <span className="text-xs font-bold text-[#D6B56C] group-hover:text-white flex items-center gap-1">
+              <span>EXPLORE DIGITAL MENU</span>
+              <span>↗</span>
+            </span>
+          </a>
+        </div>
+
         {/* Filter bar & Search */}
         <div className="p-4 border-b border-[#E8DED2] flex flex-col sm:flex-row gap-3 items-stretch sm:items-center justify-between bg-[#FAF8F3]">
           

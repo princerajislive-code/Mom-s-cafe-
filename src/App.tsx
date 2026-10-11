@@ -26,7 +26,12 @@ export default function App() {
   };
 
   const handleOpenMenu = () => {
-    setIsMenuModalOpen(true);
+    const el = document.getElementById('menu');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      setIsMenuModalOpen(true);
+    }
   };
 
   return (
@@ -48,7 +53,7 @@ export default function App() {
         {/* 3. About Section */}
         <About />
 
-        {/* 4. Compact Menu Showcase */}
+        {/* 4. Kitchen Menu Showcase */}
         <MenuPreview onOpenFullMenu={handleOpenMenu} />
 
         {/* 5. Why Mom's Cafe */}

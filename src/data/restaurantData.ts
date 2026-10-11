@@ -36,6 +36,7 @@ export const RESTAURANT_INFO = {
   googleMapsQueryUrl: "https://www.google.com/maps/search/?api=1&query=Beside+Lallu+Bhai+Mall+Ward+No+18+Bhabua+Bihar+821101",
   whatsappUrl: "https://wa.me/917870036217?text=Hi%20Mom's%20Cafe,%20I%20would%20like%20to%20place%20an%20order",
   callUrl: "tel:+917870036217",
+  digitalMenuUrl: "https://moms-dosa-cafe-luxury-digital-menu-tau.vercel.app/",
   developerCredit: {
     name: "RoadsideDeveloper",
     whatsapp: "+91 7654224826",
